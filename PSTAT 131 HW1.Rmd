@@ -2,24 +2,28 @@
 title: "PSTAT131HW1"
 author: "Tao Wang"
 date: '2022-04-02'
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
-#### Machine Learning Main Ideas
+# Machine Learning Main Ideas
 
-### Question 1: Define supervised and unsupervised learning. What are the difference(s) between them?
+####  Question 1: Define supervised and unsupervised learning. What are the difference(s) between them?
 
-## Answer: 
+####  Answer: 
 
 
-# 1. Defination of supervised learning: 
+#### 1. Defination of supervised learning: 
+
 
 According to IBM.com, "Supervised learning is a machine learning approach that's defined by its use of labeled datasets. These datasets are designed to train or 'supervise' algorithms into classifying data or predicting outcomes accurately. Using labeled inputs and outputs, the model can measure its accuracy and learn over time." (from https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning)
 
 
 To be more specific, according to the textbook, for supervised learning, "each observation of the predictor measurement(s) $x_i$, i =1,...,n there is an associated response measurement $y_i$. We wish to fit a model that relates the response to the predictors, with the aim of accurately predicting the response for future observations (prediction) or better understanding the relationship between the response and the predictors (inference)." (from page #26 of our textbook )
 
-# 2. Defination of Unsupervised learning:
+#### 2. Defination of Unsupervised learning:
+
 
 According to IBM.com, "Unsupervised learning uses machine learning algorithms to analyze and cluster unlabeled data sets. These algorithms discover hidden patterns in data without the need for human intervention (hence, they are 'unsupervised')." (from https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning)
 
@@ -28,14 +32,16 @@ Also, we should know that, " in this setting, we are in some sense working blind
 (from page #26 of our textbook)
 
 
-# 3. The differences between supervised and unsupervised learning
+#### 3. The differences between supervised and unsupervised learning
+
 
 There are so many differences between supervised and unsupervised learning. The main difference is that the supervised learning has associated response $y_i$ for each observation, while the unsupervised learning doesn't. 
 
 
-### Question 2: Explain the difference between a regression model and a classification model, specifically in the context of machine learning.
+#### Question 2: Explain the difference between a regression model and a classification model, specifically in the context of machine learning.
 
-## Answer:
+####  Answer:
+
 
 The difference between a regression model and a classification model is:
 
@@ -45,75 +51,72 @@ The response variable Y of classification model is qualitative, which take on ca
 
 
 
-### Question 3: Name two commonly used metrics for regression ML problems. Name two commonly used metrics for classification ML problems.
+####  Question 3: Name two commonly used metrics for regression ML problems. Name two commonly used metrics for classification ML problems.
 
-## Answer: (In office hour, professor said that we can skip this question since we haven't learnt yet.)
+#### Answer: (In office hour, professor said that we can skip this question since we haven't learnt yet.)
+
 
 Two commonly used metrics for regression ML problems are: 
+
+
 Two commonly used metrics for classification ML problems:
 
-### Question 4: As discussed, statistical models can be used for different purposes. These purposes can generally be classified into the following three categories. Provide a brief description of each.
+####  Question 4: As discussed, statistical models can be used for different purposes. These purposes can generally be classified into the following three categories. Provide a brief description of each.
 
-## Answer:
+####  Answer:
 
-## Descriptive models:
+#### Descriptive models:
 According to what we learned in the lecture, we use descriptive models in order to "best visually
 emphasize a trend in data." (from the lecture note)
 
-## Inferential models:
+#### Inferential models:
 According to what we learned in the lecture, the aim of inferential models is to test theories, causal claims, and "state the relationship between outcome and predictor".(from the lecture note)
 
-## Predictive models:
+#### Predictive models:
 According to the textbook, the aim of predictive models is to accurately predict "the response for future observations." (the page #26 from the textbook)
 To be more specific, we want to "predict Y with minimum reducible error." (from the lecture note)
 
 
-### Question 5: Predictive models are frequently used in machine learning, and they can usually be described as either mechanistic or empirically-driven. Answer the following questions. (In office hour, professor said that we can skip this question)
+####  Question 5: Predictive models are frequently used in machine learning, and they can usually be described as either mechanistic or empirically-driven. Answer the following questions.Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar? (In office hour, professor said that we can skip this question)
 
-## Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar?
-
-## Answer:
-# 1. The definiton of mechanistic
-Mechanistic statistics, which are parametric statistics,"are based on assumptions about the distribution of population from which the sample was taken". (from the website https://www.ibm.com/docs/en/db2woc?topic=procedures-statistics-parametric-nonparametric)
-
-# 2. The definiton of empirically-driven
-Empirically-driven statistics, which are nonparametric statistics, "are not based on assumptions, that is, the data can be collected from a sample that does not follow a specific distribution." (from the website https://www.ibm.com/docs/en/db2woc?topic=procedures-statistics-parametric-nonparametric)
+####  Answer:
 
 
 
 
 
 
-### Question 6: A political candidate’s campaign has collected some detailed voter history data from their constituents. The campaign is interested in two questions:1. Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate? 2.How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate? Classify each question as either predictive or inferential. Explain your reasoning for each.
 
-## Answer: 
-# 1. Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate?
+####  Question 6: A political candidate’s campaign has collected some detailed voter history data from their constituents. The campaign is interested in two questions:1. Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate? 2.How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate? Classify each question as either predictive or inferential. Explain your reasoning for each.
+
+####  Answer: 
+#### 1. Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate?
 For question 1, this question should be predictive.
 
 From the lecture, we know that the aim of predictive models is to accurately predict "the response for future observations, and the aim of inferential models is to test theories, causal claims, and "state the relationship between outcome and predictor".  (the page #26 from the textbook) Clearly, for question 1, we can know that the voter’s profile/data is the predictor, and since we want to predict whether they will vote in favor of the candidate, we can know that the probability of they vote in favor of the candidate is our Y. Then, we can know that  this question 1 is predictive.
 
-# 2.How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate?
+#### 2.How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate?
 For question 2, this question should be inferential.
 In this question, we focus on how a voter’s likelihood of support for the candidate change if they had personal contact with the candidate, which means that we want to find the relationship between the voter’s likelihood of support for the candidate and whether they had personal contact with the candidate. So, clearly, we can know that this question is inferential.
 
 
 
 
-#### Exploratory Data Analysis
-## This section will ask you to complete several exercises. For this homework assignment, we’ll be working with the mpg data set that is loaded when you load the tidyverse. Make sure you load the tidyverse and any other packages you need.
+# Exploratory Data Analysis
+This section will ask you to complete several exercises. For this homework assignment, we’ll be working with the mpg data set that is loaded when you load the tidyverse. Make sure you load the tidyverse and any other packages you need.
 
-## Exploratory data analysis (or EDA) is not based on a specific set of rules or formulas. It is more of a state of curiosity about data. It’s an iterative process of:
+Exploratory data analysis (or EDA) is not based on a specific set of rules or formulas. It is more of a state of curiosity about data. It’s an iterative process of:
 
-##    generating questions about data
-##    visualize and transform your data as necessary to get answers
-##    use what you learned to generate more questions
-## A couple questions are always useful when you start out. These are “what variation occurs within the variables,” and “what covariation occurs between the variables.”
+generating questions about data
+visualize and transform your data as necessary to get answers
+use what you learned to generate more questions
+A couple questions are always useful when you start out. These are “what variation occurs within the variables,” and “what covariation occurs between the variables.”
 
-## You should use the tidyverse and ggplot2 for these exercises.
+#### You should use the tidyverse and ggplot2 for these exercises.
 
 
-#### Exercise 1:
-## We are interested in highway miles per gallon, or the hwy variable. Create a histogram of this variable. Describe what you see/learn.
+####  Exercise 1:
+#### We are interested in highway miles per gallon, or the hwy variable. Create a histogram of this variable. Describe what you see/learn.
 
 ```{r, results= 'hide'}
 # install packages
@@ -132,26 +135,28 @@ library(ISLR)
 
 # Create a histogram of this variable of hwy
 ggplot(mpg, aes(x = hwy)) + geom_histogram(fill = 'blue', color = 'red') + 
-  labs(title = "The histogram of variable highway miles per gallon", x = 'The highway miles per gallon(hwy)')
+  labs(title = "The histogram of variable highway miles per gallon", 
+       x = 'The highway miles per gallon(hwy)')
 ```
 
-## Answer:
+#### Answer:
 For the histogram of this hwy, we can see that the maximum count occurs when highway miles per gallon is close to 26. We can also see that this data is left-skewed. 
 
 #### Exercise 2:
-## Create a scatterplot. Put hwy on the x-axis and cty on the y-axis. Describe what you notice. Is there a relationship between hwy and cty? What does this mean?
+#### Create a scatterplot. Put hwy on the x-axis and cty on the y-axis. Describe what you notice. Is there a relationship between hwy and cty? What does this mean?
 
 ```{r}
 help(mpg)
 # Create a scatterplot. Put hwy on the x-axis and cty on the y-axis. 
-ggplot(mpg, aes(x = hwy, y = cty)) + geom_point() + labs(title = "The scatterplot of cty vs hwy", x = 'The highway miles per gallon(hwy)', y = 'The city miles per gallon (cty)')
+ggplot(mpg, aes(x = hwy, y = cty)) + geom_point() + labs(title = "The scatterplot of cty vs hwy",
+        x = 'The highway miles per gallon(hwy)', y = 'The city miles per gallon (cty)')
 ```
 
-## Answer:
+#### Answer:
 From the scatterplot, we can see that there is positive relationship between hwy and cty, which means that as the amount of highway miles per gallon increases, the amount of city miles per gallon will also increase.
 
 #### Exercise 3:
-## Make a bar plot of manufacturer. Flip it so that the manufacturers are on the y-axis. Order the bars by height. Which manufacturer produced the most cars? Which produced the least?
+#### Make a bar plot of manufacturer. Flip it so that the manufacturers are on the y-axis. Order the bars by height. Which manufacturer produced the most cars? Which produced the least?
 ```{r}
 
 # 1. Make a bar plot of manufacturer
@@ -177,11 +182,17 @@ ggplot(newmanufacturer,aes(y= reorder(manufacturer, -count),  x=count)) + geom_b
 
 
 ```
-## Answer:
+
+
+#### Answer:
+
+
 From the bar plot we made, we can know that Dodge produced the most cars, and Lincoln produced the least cars.
 
-#### Exercise 4:
-## Make a box plot of hwy, grouped by cyl. Do you see a pattern? If so, what?
+#### Exercise 4: Make a box plot of hwy, grouped by cyl. Do you see a pattern? If so, what?
+
+
+
 ```{r}
 # Recall what we learn in PSTAT 10 
 # A model formula is given by y~x where  y is a numeric vector which is grouped according to the
@@ -189,16 +200,21 @@ From the bar plot we made, we can know that Dodge produced the most cars, and Li
 # In this question hwy is grouped by cyl. 
 # So, x = cyl, y = hwy
 ggplot(mpg, aes(x= as.factor(cyl), y = hwy))+ geom_boxplot() +
-  labs(title = "The box plot of hwy, grouped by cyl", y = 'The highway miles per gallon(hwy)', x= 'The city miles per gallon (cyl)')
+  labs(title = "The box plot of hwy, grouped by cyl", y = 'The highway miles per gallon(hwy)', 
+       x= 'The city miles per gallon (cyl)')
   
 ```
-## Answer:
+
+
+#### Answer:
+
+
 Clearly, we can find that there is pattern in this box plot, which shows us that as the amount of cyl increases, the amount of hwy will decrease. It means that, there is a negative relationship between cyl and hwy.
 
 
 #### Exercise 5:
-## Use the corrplot package to make a lower triangle correlation matrix of the mpg dataset. (Hint: You can find information on the package here.)
-## Which variables are positively or negatively correlated with which others? Do these relationships make sense to you? Are there any that surprise you?
+#### Use the corrplot package to make a lower triangle correlation matrix of the mpg dataset. (Hint: You can find information on the package here.)
+### Which variables are positively or negatively correlated with which others? Do these relationships make sense to you? Are there any that surprise you?
 
 ```{r}
 
@@ -214,9 +230,9 @@ newmpg <- mpg %>% select(-c(manufacturer,model,trans,drv,fl,class))
 corrplot(cor(newmpg), type = 'lower')
 ```
 
-## Answer:
+#### Answer:
 
-# According to the corrplot, we can know that:
+##### According to the corrplot, we can know that:
 
 * 1. hwy (highway miles per gallon) has negatively correlated with displ (engine displacement, in litres)
 
@@ -236,12 +252,15 @@ corrplot(cor(newmpg), type = 'lower')
 
 * 9. Year (year of manufacture) has positively correlated with displ (engine displacement, in litres)
 
-# These relationships make sense to me.
-Explanation:We can understand these relationships through our everyday experience.
+##### These relationships make sense to me.
+
+Explanation: 
+
+We can understand these relationships through our everyday experience.
 For example, Year (year of manufacture) has positively correlated with displ (engine displacement, in litres) because when people use a car for a long time, the probability of needing to replace the engine is getting higher and higher. So, it is very clear for us to understand that the Year has positively correlated with displ.
 
 
-# No, there is no surprise.
+##### No, there is no surprise.
 
 
 
