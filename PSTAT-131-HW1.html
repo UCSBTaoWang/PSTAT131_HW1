@@ -1849,7 +1849,7 @@ library(tidyverse)</code></pre>
 ## x dplyr::lag()      masks stats::lag()
 ## x yardstick::spec() masks readr::spec()
 ## x recipes::step()   masks stats::step()
-## • Learn how to get started at https://www.tidymodels.org/start/</code></pre>
+## • Use suppressPackageStartupMessages() to eliminate package startup messages</code></pre>
 <pre class="r"><code>library(ISLR)</code></pre>
 <pre class="r"><code># Create a histogram of this variable of hwy
 ggplot(mpg, aes(x = hwy)) + geom_histogram(fill = &#39;blue&#39;, color = &#39;red&#39;) + 
